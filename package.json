@@ -1,6 +1,6 @@
 {
   "name": "use-web-otp",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "A minimal reack hook to implement webOTP in your app",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
