@@ -40,14 +40,14 @@ $ npm install use-web-otp
 
 ## Usage example
 
+to be added ...
 
 ## Contributing
 
 1. Clone this repo
 2. Create a branch: `git checkout -b your-feature`
 3. Make some changes
-4. Test your changes by [running your local version](#developing-locally)
-5. Push your branch and open a Pull Request
+4. Push your branch and open a Pull Request
 
 ## License
 
