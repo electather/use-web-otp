@@ -1,0 +1,80 @@
+{
+  "name": "use-web-otp",
+  "version": "0.1.0",
+  "description": "A minimal reack hook to implement webOTP in your app",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "repository": "https://github.com/electather/use-web-otp.git",
+  "bugs": {
+    "url": "https://github.com/electather/use-web-otp/issues"
+  },
+  "homepage": "https://github.com/electather/use-web-otp",
+  "author": "Omid Astaraki <omidocean@gmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint {src,tests,stories}/**/*.{ts,tsx}",
+    "lint:fix": "yarn lint --fix",
+    "lint:types": "tsc --noEmit",
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "yarn build:cjs && yarn build:es",
+    "release": "release-it",
+    "prepare": "husky install"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.0  || ^17.0.0",
+    "react-dom": "^16.8.0  || ^17.0.0"
+  },
+  "keywords": [
+    "React",
+    "React-hooks",
+    "webOTP",
+    "otp",
+    "chrome-mobile"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.js": "eslint --cache --fix"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^3.3.0",
+    "@types/jest": "^27.0.1",
+    "@types/react": "^17.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.9.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "11.1.2",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "release-it": "^14.11.5",
+    "ts-jest": "^27.0.5",
+    "ts-loader": "^9.2.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  }
+}
