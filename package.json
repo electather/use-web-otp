@@ -1,10 +1,10 @@
 {
   "name": "use-web-otp",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "A minimal reack hook to implement webOTP in your app",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "typings": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "repository": "https://github.com/electather/use-web-otp.git",
   "bugs": {
     "url": "https://github.com/electather/use-web-otp/issues"
@@ -24,7 +24,8 @@
     "prepare": "husky install"
   },
   "files": [
-    "dist",
+    "lib",
+    "esm",
     "LICENSE",
     "README.md"
   ],

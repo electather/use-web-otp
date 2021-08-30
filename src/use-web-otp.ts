@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 type onSuccessEvent = (otpCode: string) => unknown;
 
@@ -8,16 +8,16 @@ function useWebOtp(onSuccess: onSuccessEvent) {
 
   useEffect(() => {
     let isMounted = true;
-    const form = inputRef?.current?.closest('form');
+    const form = inputRef?.current?.closest("form");
     const onSubmitEvent = () => {
       abortController.current.abort();
     };
     if (form) {
-      form.addEventListener('submit', onSubmitEvent);
+      form.addEventListener("submit", onSubmitEvent);
     }
     (navigator.credentials as any) // new WebOTP API types are not added yet
       .get({
-        otp: { transport: ['sms'] },
+        otp: { transport: ["sms"] },
         signal: abortController.current.signal,
       })
       .then((otp: any) => {
@@ -37,10 +37,12 @@ function useWebOtp(onSuccess: onSuccessEvent) {
       });
 
     return () => {
-      form?.removeEventListener('submit', onSubmitEvent);
+      form?.removeEventListener("submit", onSubmitEvent);
       isMounted = false;
     };
   }, []);
+
+  return inputRef;
 }
 
 export default useWebOtp;
